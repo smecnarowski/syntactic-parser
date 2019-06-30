@@ -63,6 +63,12 @@ class TokensExtractor {
             cleanedLexicaSymbol = cleanedLexicaSymbol.slice(1)
             baseCursorPosition += position + 1
         }
+        baseLexicalSymbol.split('').forEach((char, index) => {
+            this.ignoredStrings.push({
+                position: baseCursorPosition + index,
+                value: char
+            })
+        })
     }
 
     get ignored() {
