@@ -64,10 +64,12 @@ class TokensExtractor {
             baseCursorPosition += position + 1
         }
         baseLexicalSymbol.split('').forEach((char, index) => {
-            this.ignoredStrings.push({
-                position: baseCursorPosition + index,
-                value: char
-            })
+            if (char !== ' ') {
+                this.ignoredStrings.push({
+                    position: baseCursorPosition + index,
+                    value: char
+                })
+            }
         })
     }
 

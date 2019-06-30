@@ -93,7 +93,10 @@ export default {
   data() {
     return {
       analysysItems: [],
-      source: `12 3x+2.5
+      source: `12..#
+1..
+1#.!
+12 3x+2.5
 3 7
 x12+7.5
 123x+2.5
